@@ -48,6 +48,8 @@ class Student
     rows = DB[:conn].execute(sql,limit)
     rows.map{|row| self.new_from_db(row)}
   end 
+  
+  def self.all_students_in_grade_X(grade)
 
   def self.find_by_name(name)
     # find the student in the database given a name
