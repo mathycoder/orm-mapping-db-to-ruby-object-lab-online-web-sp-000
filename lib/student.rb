@@ -27,7 +27,7 @@ class Student
     }
     
     row = DB[:conn].execute(sql, name)
-    
+    binding.pry 
   end
   
   def save
