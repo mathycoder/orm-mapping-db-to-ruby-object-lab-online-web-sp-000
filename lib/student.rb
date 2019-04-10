@@ -22,7 +22,9 @@ class Student
   end
   
   def self.all_students_in_grade_9 
-    
+    sql = "SELECT * FROM students WHERE grade = 9"
+    rows = DB[:conn].execute(sql)
+    rows.map{|row| self.new_from_db(row)}
   end 
 
   def self.find_by_name(name)
