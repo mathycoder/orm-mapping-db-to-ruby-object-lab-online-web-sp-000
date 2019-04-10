@@ -40,7 +40,7 @@ class Student
       LIMIT 1
     }
     row = DB[:conn].execute(sql)[0]
-    rows.map{|row| self.new_from_db(row)}
+    self.new_from_db(row)
   end 
 
   def self.find_by_name(name)
