@@ -28,7 +28,6 @@ class Student
     
     row = DB[:conn].execute(sql, name)[0]
     noob = self.new_from_db(row)
-    binding.pry 
   end
   
   def save
