@@ -18,6 +18,7 @@ class Student
     
     sql = "SELECT * FROM students"
     rows = DB[:conn].execute(sql)
+    rows.map{|row| self.new_from_db(row)}
     binding.pry 
     
   end
