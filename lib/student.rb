@@ -19,8 +19,6 @@ class Student
     sql = "SELECT * FROM students"
     rows = DB[:conn].execute(sql)
     rows.map{|row| self.new_from_db(row)}
-    binding.pry 
-    
   end
 
   def self.find_by_name(name)
