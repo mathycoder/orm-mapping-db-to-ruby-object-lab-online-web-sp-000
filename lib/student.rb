@@ -27,7 +27,7 @@ class Student
     }
     
     row = DB[:conn].execute(sql, name)[0]
-    self.new_from_db(row)
+    noob = self.new_from_db(row)
     binding.pry 
   end
   
